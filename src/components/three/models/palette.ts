@@ -1,0 +1,37 @@
+/** Scene colours, kept in step with the Tailwind brand tokens. */
+export const C = {
+  navy: '#0F1F3B',
+  navy2: '#1F3966',
+  navy3: '#2E4D80',
+  amber: '#F57C1F',
+  amberSoft: '#FFB167',
+  white: '#FAF8F4',
+  paper: '#F3F0EA',
+  wall: '#EFEBE4',
+  wallWarm: '#F4EDE2',
+  grey: '#C9CED6',
+  greyMid: '#9AA3B0',
+  greyDark: '#5B6573',
+  kraft: '#C9A06F',
+  kraftDark: '#A97E50',
+  tape: '#E9D7B0',
+  wood: '#B88A5C',
+  woodLight: '#DBC29F',
+  woodDark: '#7E5B3C',
+  glass: '#A9C1D8',
+  windowGlow: '#FFE2B8',
+  ground: '#E7E2D8',
+  lawn: '#CBD3B8',
+  road: '#3B4351',
+  leaf: '#7F9C6B',
+  leafDark: '#5F7E52',
+  fabric: '#56698A',
+  fabricWarm: '#C8B59C',
+  linen: '#E9E3D8',
+  screen: '#162033',
+  skin: '#B98A6A',
+  wrap: '#DCE6F0',
+} as const;
+
+/** Department label colours for office cartons. */
+export const LABELS = [C.amber, C.navy3, '#4E8F7A', '#B9506A'] as const;

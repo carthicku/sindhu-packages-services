@@ -1,0 +1,81 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html {
+    scroll-padding-top: 5.5rem;
+    -webkit-text-size-adjust: 100%;
+  }
+  body {
+    @apply bg-warm-100 font-sans text-navy-900 antialiased;
+    font-feature-settings: 'ss01', 'cv11';
+  }
+  ::selection {
+    @apply bg-amber-200 text-navy-900;
+  }
+  :focus-visible {
+    @apply outline-none ring-2 ring-amber-500 ring-offset-2 ring-offset-warm-100;
+  }
+  .on-dark :focus-visible {
+    @apply ring-offset-navy-900;
+  }
+  h1, h2, h3, h4 {
+    @apply tracking-tight;
+    text-wrap: balance;
+  }
+  p {
+    text-wrap: pretty;
+  }
+}
+
+@layer components {
+  .container-site {
+    @apply mx-auto w-full max-w-site px-4 sm:px-6 lg:px-8;
+  }
+  .section {
+    @apply relative py-20 sm:py-24 lg:py-32;
+  }
+  .eyebrow {
+    @apply inline-flex items-center gap-3 text-xs font-bold uppercase tracking-[0.18em] text-amber-600;
+  }
+  .card {
+    @apply rounded-3xl border border-navy-900/5 bg-white shadow-soft;
+  }
+  .field-label {
+    @apply mb-1.5 block text-sm font-semibold text-navy-800;
+  }
+  .field {
+    @apply block w-full rounded-xl border border-navy-900/15 bg-white px-4 py-3 text-[15px] text-navy-900 shadow-sm transition placeholder:text-navy-300 hover:border-navy-900/30 focus:border-amber-500 focus:outline-none focus:ring-4 focus:ring-amber-500/15;
+  }
+  .field[aria-invalid='true'] {
+    @apply border-red-500 focus:border-red-500 focus:ring-red-500/15;
+  }
+  .field-error {
+    @apply mt-1.5 flex items-start gap-1.5 text-sm font-medium text-red-600;
+  }
+  .choice {
+    @apply relative flex cursor-pointer items-center gap-3 rounded-2xl border border-navy-900/10 bg-white px-4 py-3.5 text-left text-[15px] font-semibold text-navy-800 transition hover:border-navy-900/25 has-[:checked]:border-amber-500 has-[:checked]:bg-amber-50 has-[:checked]:ring-1 has-[:checked]:ring-amber-500 has-[:focus-visible]:ring-2 has-[:focus-visible]:ring-amber-500;
+  }
+}
+
+@layer utilities {
+  .bg-grid {
+    background-image: linear-gradient(rgba(15, 31, 59, 0.04) 1px, transparent 1px),
+      linear-gradient(90deg, rgba(15, 31, 59, 0.04) 1px, transparent 1px);
+    background-size: 48px 48px;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}
