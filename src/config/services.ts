@@ -25,7 +25,7 @@ export type Service = {
   category: 'residential' | 'commercial' | 'other';
   /**
    * Set to false to hide a service everywhere (cards, footer, planner).
-   * Only publish services Sindhu Packers Services actually offers.
+   * Only publish services Sindhu Packer Services actually offers.
    */
   enabled: boolean;
   /** Short availability note shown on the card, where one is needed. */

@@ -1,5 +1,5 @@
 /**
- * Company details for Sindhu Packers Services.
+ * Company details for Sindhu Packer Services.
  *
  * Contact details and GST numbers are supplied by the company. Anything still
  * empty (social links, service areas, testimonials) stays hidden until official
@@ -25,7 +25,7 @@ export type Testimonial = {
 };
 
 export const site = {
-  name: 'Sindhu Packers Services',
+  name: 'Sindhu Packer Services',
   tagline: 'Pack. Move. Settle.',
 
   contact: {
