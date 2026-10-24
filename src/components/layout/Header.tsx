@@ -2,6 +2,7 @@ import { AnimatePresence, motion } from 'framer-motion';
 import { ArrowRight, Menu, X } from 'lucide-react';
 import { useEffect, useRef, useState, type MouseEvent } from 'react';
 import { Link, useLocation, useNavigate } from 'react-router-dom';
+import { site } from '../../config/site';
 import { scrollToSection, useMove } from '../../context/MoveContext';
 import { Button } from '../ui/Button';
 import { BrandLogo } from './Logo';
@@ -101,7 +102,7 @@ export function Header() {
         Skip to content
       </a>
       <div className={`container-site flex items-center justify-between gap-6 transition-all duration-300 ${scrolled ? 'h-16' : 'h-20'}`}>
-        <Link to="/" onClick={sectionLink('top')} className="shrink-0 rounded-lg" aria-label="Sindhu Packages Services — home">
+        <Link to="/" onClick={sectionLink('top')} className="shrink-0 rounded-lg" aria-label={`${site.name} — home`}>
           <BrandLogo className="h-12 w-auto sm:h-14" />
         </Link>
 

@@ -24,7 +24,7 @@ export function Hero() {
       <LazyScene
         className="!absolute inset-0 -z-10"
         preloadMargin="0px"
-        label="A branded Sindhu Packages Services truck arrives at a modern home where packed cartons wait by the entrance."
+        label={`A branded ${site.name} truck arrives at a modern home where packed cartons wait by the entrance.`}
         fallback={<SceneFallback variant="hero" />}
       >
         <HeroScene />

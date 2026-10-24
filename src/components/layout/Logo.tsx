@@ -7,8 +7,8 @@ export function BrandLogo({ className = 'h-11 w-auto', white = false }: { classN
     <img
       src={white ? LOGO_WHITE_URL : LOGO_URL}
       alt={site.name}
-      width={1185}
-      height={454}
+      width={1748}
+      height={645}
       className={className}
       decoding="async"
     />
